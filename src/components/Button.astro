@@ -1,0 +1,21 @@
+---
+interface Props {
+	text?: string
+	href: string
+	class?: string
+}
+
+const { href, text } = Astro.props
+---
+
+<button
+	class:list={[
+		Astro.props.class,
+		'bg-card text-card-foreground flex h-full items-center justify-center overflow-hidden rounded-lg border border-zinc-800 text-xs font-bold shadow-sm'
+	]}
+>
+	<a href={href} class="flex w-fit items-center justify-center">
+		{text && <h2 class="p-4">{text}</h2>}
+		<slot />
+	</a>
+</button>

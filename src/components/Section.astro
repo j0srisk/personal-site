@@ -1,0 +1,22 @@
+---
+interface Props {
+	title?: string
+	href?: string
+}
+
+const { title, href } = Astro.props
+---
+
+<section class="flex w-full flex-col gap-4">
+	<div class="flex w-full justify-between">
+		<h1 class="text-lg font-bold text-white">{title}</h1>
+		{
+			href && (
+				<a href={href} class="flex gap-1 text-sm text-white hover:gap-2">
+					View all<span>&rarr;</span>
+				</a>
+			)
+		}
+	</div>
+	<slot />
+</section>
