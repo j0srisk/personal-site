@@ -10,8 +10,8 @@ const { title, href } = Astro.props
 
 <div
 	class:list={[
-		Astro.props.class,
-		'h-full w-full rounded-2xl border border-zinc-800 p-4 text-white shadow-sm'
+		'h-full w-full overflow-hidden rounded-2xl border border-zinc-800 text-white shadow-sm',
+		Astro.props.class
 	]}
 >
 	{title && <h3 class="mb-4 text-base font-bold">{title}</h3>}

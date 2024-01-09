@@ -6,6 +6,7 @@ import Section from '../components/Section.astro'
 import Button from '../components/Button.astro'
 import Experience from '../components/Experience.astro'
 import Technology from '../components/Technology.astro'
+import Location from '../components/Location.tsx'
 ---
 
 <Layout title="Welcome to Astro.">
@@ -94,9 +95,9 @@ import Technology from '../components/Technology.astro'
 						<p class="font-semibold text-white">Years Freelancing</p>
 					</div>
 				</Card>
-				<Card class="aspect-square bg-[url(/nebraska.jpg)] bg-cover p-4">
+				<Card class="aspect-square p-0">
 					<div class="flex h-full w-full flex-col justify-end">
-						<p class="font-semibold text-white"></p>
+						<Location client:only="react" />
 					</div>
 				</Card>
 			</div>

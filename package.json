@@ -10,8 +10,15 @@
     "astro": "astro"
   },
   "dependencies": {
+    "@astrojs/react": "^3.0.9",
     "@astrojs/tailwind": "^5.1.0",
-    "astro": "^4.1.1"
+    "@types/react": "^18.2.47",
+    "@types/react-dom": "^18.2.18",
+    "astro": "^4.1.1",
+    "maplibre-gl": "^3.6.2",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-map-gl": "^7.1.7"
   },
   "devDependencies": {
     "prettier": "^3.1.1",
