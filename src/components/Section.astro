@@ -8,15 +8,17 @@ const { title, href } = Astro.props
 ---
 
 <section class="flex w-full flex-col gap-4">
-	<div class="flex w-full justify-between">
-		<h1 class="text-lg font-bold text-white">{title}</h1>
-		{
-			href && (
-				<a href={href} class="flex gap-1 text-sm text-white hover:gap-2">
-					View all<span>&rarr;</span>
-				</a>
-			)
-		}
-	</div>
+	{
+		(title || href) && (
+			<div class="flex w-full justify-between">
+				{title && <h1 class="text-lg font-semibold text-white">{title}</h1>}
+				{href && (
+					<a href={href} class="flex gap-1 text-sm text-white hover:gap-2">
+						View all<span>&rarr;</span>
+					</a>
+				)}
+			</div>
+		)
+	}
 	<slot />
 </section>

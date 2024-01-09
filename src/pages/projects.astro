@@ -1,0 +1,31 @@
+---
+import Layout from '../layouts/Layout.astro'
+import Card from '../components/Card.astro'
+import Hero from '../components/Hero.astro'
+import Section from '../components/Section.astro'
+import Button from '../components/Button.astro'
+import Experience from '../components/Experience.astro'
+import Technology from '../components/Technology.astro'
+import Location from '../components/Location.tsx'
+import Nav from '../components/Nav.astro'
+import Project from '../components/Project.astro'
+---
+
+<Layout title="Projects">
+	<Nav title="projects" />
+	<div class="flex h-8 w-fit flex-col">
+		<Button href="/" text="← Back Home" />
+	</div>
+
+	<Section title="Collection of my most recent projects">
+		<div class="grid grid-cols-3 gap-4">
+			<Project name="Dossi AI" href="" image="/localhost_3000_landing(FHD 4_3).png" />
+			<Project name="Dossi AI" href="" image="/localhost_3000_landing(FHD 4_3).png" />
+			<Project name="Dossi AI" href="" image="/localhost_3000_landing(FHD 4_3).png" />
+			<Project name="Dossi AI" href="" image="/localhost_3000_landing(FHD 4_3).png" />
+			<Project name="Dossi AI" href="" image="/localhost_3000_landing(FHD 4_3).png" />
+			<Project name="Dossi AI" href="" image="/localhost_3000_landing(FHD 4_3).png" />
+			<Project name="Dossi AI" href="" image="/localhost_3000_landing(FHD 4_3).png" />
+		</div>
+	</Section>
+</Layout>

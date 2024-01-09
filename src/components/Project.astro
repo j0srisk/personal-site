@@ -1,0 +1,24 @@
+---
+import Card from './Card.astro'
+
+interface Props {
+	name: string
+	href: string
+	image: string
+}
+
+const { href, name, image } = Astro.props
+---
+
+<div class="group flex flex-col items-center gap-2">
+	<Card class="p-2">
+		<img src={image} alt="random image" class="rounded-xl group-hover:scale-95" />
+	</Card>
+
+	<div class="flex w-full flex-col items-start justify-start">
+		<p class="font-semibold">
+			{name}
+		</p>
+		<p class="text-sm text-gray-500">Details</p>
+	</div>
+</div>
