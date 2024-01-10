@@ -1,19 +1,21 @@
 ---
+import { twMerge } from 'tailwind-merge'
+
 interface Props {
 	title?: string
 	href?: string
-	class?: string
+	className?: string
 }
 
-const { title, href } = Astro.props
+const { title, href, className } = Astro.props
 ---
 
 <div
-	class:list={[
-		'border-1 w-full overflow-hidden rounded-3xl border border-neutral-300 shadow-inner',
-		Astro.props.class
-	]}
+	class={twMerge(
+		'border-1 p-4 w-full overflow-hidden rounded-3xl border border-neutral-300 shadow-inner',
+		className
+	)}
 >
-	{title && <h3 class="mb-4 text-base font-bold">{title}</h3>}
+	{title && <h3 class="mb-4 pl-2 text-sm font-semibold">{title}</h3>}
 	<slot />
 </div>
