@@ -1,11 +1,11 @@
 import Map from 'react-map-gl/maplibre'
 
-function Location() {
+function Mapbox() {
 	return (
 		<Map
 			initialViewState={{
-				longitude: -97.73333,
-				latitude: 30.266666,
+				longitude: -95.3698,
+				latitude: 29.7604,
 				zoom: 6
 			}}
 			mapStyle="https://api.maptiler.com/maps/streets/style.json?key=92AjonH81Dbzke1Z7145"
@@ -14,4 +14,4 @@ function Location() {
 	)
 }
 
-export default Location
+export default Mapbox

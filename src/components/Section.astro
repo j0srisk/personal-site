@@ -11,7 +11,7 @@ const { title, href } = Astro.props
 	{
 		(title || href) && (
 			<div class="flex w-full justify-between">
-				{title && <h1 class="text-lg font-semibold">{title}</h1>}
+				{title && <h1 class="text-lg font-bold">{title}</h1>}
 				{href && (
 					<a href={href} class="flex gap-1 text-sm hover:gap-2">
 						View all<span>&rarr;</span>

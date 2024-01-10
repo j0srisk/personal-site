@@ -12,10 +12,10 @@ const { title, href, className } = Astro.props
 
 <div
 	class={twMerge(
-		'border-1 p-4 w-full overflow-hidden rounded-3xl border border-neutral-300 shadow-inner',
+		'relative border-1 p-4 w-full overflow-hidden rounded-3xl border border-neutral-300 shadow',
 		className
 	)}
 >
-	{title && <h3 class="mb-4 pl-2 text-sm font-semibold">{title}</h3>}
+	{title && <h3 class="pb-4 pl-2 text-sm font-semibold">{title}</h3>}
 	<slot />
 </div>
