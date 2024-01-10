@@ -5,20 +5,31 @@ interface Props {
 	name: string
 	href: string
 	image: string
+	tags?: string[]
 }
 
-const { href, name, image } = Astro.props
+const { href, name, image, tags } = Astro.props
 ---
 
-<div class="group flex flex-col items-center gap-2">
+<a href={href} class="group flex flex-col items-center gap-2">
 	<Card className="p-2">
-		<img src={image} alt="random image" class="rounded-xl group-hover:scale-95" />
+		<img src={image} alt="random image" class="aspect-[3/2] rounded-2xl" />
 	</Card>
 
-	<div class="flex w-full flex-col items-start justify-start">
+	<div class="flex w-full flex-col items-start justify-start gap-1">
 		<p class="font-semibold">
 			{name}
 		</p>
-		<p class="text-sm text-gray-500">Details</p>
+		{
+			tags && (
+				<div class="flex flex-wrap gap-1">
+					{tags.map((tag) => (
+						<span class="rounded-sm bg-gray-100 px-1 py-0.5 text-xs font-semibold text-gray-500">
+							{tag}
+						</span>
+					))}
+				</div>
+			)
+		}
 	</div>
-</div>
+</a>

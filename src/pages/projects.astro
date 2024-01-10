@@ -5,6 +5,10 @@ import Button from '../components/Button.astro'
 
 import Nav from '../components/Nav.astro'
 import Project from '../components/Project.astro'
+
+import { getCollection } from 'astro:content'
+
+const projects = await getCollection('projects')
 ---
 
 <Layout title="Projects">
@@ -15,13 +19,16 @@ import Project from '../components/Project.astro'
 
 	<Section title="Some Stuff I've Worked On">
 		<div class="grid grid-cols-3 gap-4">
-			<Project name="Dossi AI" href="" image="/localhost_3000_landing(FHD 4_3).png" />
-			<Project name="Dossi AI" href="" image="/localhost_3000_landing(FHD 4_3).png" />
-			<Project name="Dossi AI" href="" image="/localhost_3000_landing(FHD 4_3).png" />
-			<Project name="Dossi AI" href="" image="/localhost_3000_landing(FHD 4_3).png" />
-			<Project name="Dossi AI" href="" image="/localhost_3000_landing(FHD 4_3).png" />
-			<Project name="Dossi AI" href="" image="/localhost_3000_landing(FHD 4_3).png" />
-			<Project name="Dossi AI" href="" image="/localhost_3000_landing(FHD 4_3).png" />
+			{
+				projects.map((project) => (
+					<Project
+						href={'/projects/' + project.slug}
+						name={project.data.name}
+						image={project.data.image}
+						tags={project.data.tags}
+					/>
+				))
+			}
 		</div>
 	</Section>
 </Layout>

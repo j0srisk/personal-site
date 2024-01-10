@@ -10,11 +10,14 @@ import Button from './Button.astro'
 <nav class="flex w-full justify-between pt-0">
 	<div class="flex gap-0.5 text-2xl font-semibold">
 		<p class="text-slate-600">josephrisk.com</p>
-		<p class="">/</p>
+		<p class="text-slate-600">/</p>
 		<p>{title}.html</p>
 	</div>
 	<div class="flex justify-between gap-2">
-		<Button href="https://github.com/j0srisk" className="h-8 w-8 border-black bg-neutral-900 p-1">
+		<Button
+			href="https://github.com/j0srisk"
+			className="h-8 w-8 border-0 border-black bg-neutral-900 p-1 shadow-none"
+		>
 			<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 1024" fill="none" class="h-5 w-5">
 				<path
 					fill-rule="evenodd"
@@ -27,7 +30,7 @@ import Button from './Button.astro'
 
 		<Button
 			href="https://www.linkedin.com/in/josephrisk/"
-			className="h-8 w-8 border-sky-700 bg-[#007EBB] p-1"
+			className="h-8 w-8 border-0 border-sky-700 bg-[#007EBB] p-1 shadow-none"
 		>
 			<svg
 				xmlns="http://www.w3.org/2000/svg"
@@ -56,6 +59,10 @@ import Button from './Button.astro'
 			</svg>
 		</Button>
 
-		<Button href="/resume" className="h-8 border-amber-600 bg-amber-500 text-white" text="Resume" />
+		<Button
+			href="/resume"
+			className="h-8 border-0 border-amber-600 bg-amber-500 text-white shadow-none"
+			text="Resume"
+		/>
 	</div>
 </nav>
