@@ -13,30 +13,33 @@ import TexasEx from '../components/cards/TexasEx.astro'
 import Stats from '../components/cards/Stats.astro'
 import Map from '../components/cards/Map.astro'
 import Stack from '../components/cards/Stack.astro'
+import Socials from '../components/cards/Socials.astro'
 ---
 
 <Layout title="Welcome to Astro.">
 	<Nav title=`index` />
 	<Hero />
 	<Section title="Latest Projects" href="/projects">
-		<Card className="border-sky-400 bg-sky-400/25 pb-0 h-60">
+		<Card className="h-60 border-sky-400 bg-sky-400/25 pb-0">
 			<div class="flex">
 				<div class="flex flex-1 flex-col gap-2 py-8 pl-8 text-sky-900">
 					<h3 class="text-2xl font-bold">Dossi AI</h3>
 					<p class="">Next.js RAG application</p>
 					<Button
-						className="h-8 border border-sky-600 bg-sky-500 text-base font-semibold text-white"
+						className="border border-sky-600 bg-sky-500 text-base font-semibold text-white"
 						href=""
 					>
 						Demo
 					</Button>
 				</div>
-				<div class="flex h-full flex-1 flex-col items-start justify-start rounded-t-xl pr-8 pt-8 rotate-3">
+				<div
+					class="flex h-full flex-1 rotate-3 flex-col items-start justify-start rounded-t-xl pr-8 pt-8"
+				>
 					<img src="/localhost_3000_landing(FHD 4_3).png" alt="Dossi AI" class="rounded-t-lg" />
 				</div>
 			</div>
 		</Card>
-		<Card className="border-amber-400 bg-amber-400/25 pb-0">
+		<Card className="h-60 border-amber-400 bg-amber-400/25 pb-0">
 			<div class="flex">
 				<div class="flex flex-1 flex-col gap-2 py-8 pl-8 text-amber-900">
 					<h3 class="text-2xl font-bold">Cellularr</h3>
@@ -58,22 +61,13 @@ import Stack from '../components/cards/Stack.astro'
 		<div class="grid grid-cols-3 gap-4">
 			<TexasEx />
 			<Stats />
-			<Map  />
+			<Map />
 		</div>
 		<div class="flex gap-4">
 			<div class="flex w-[58%] flex-col gap-4">
 				<Experience />
 				<Music />
-				<Card className="pb-0" title="Get in Contact">
-					<div class="flex h-full w-full gap-4 items-end">
-						<div class="flex h-full w-full flex-col gap-4 rounded-t-xl bg-slate-50 p-4 pb-4 shadow-inner">
-							<Button className="h-8">
-								Email
-								</Button>
-						</div>
-						<img src="/memojiwave.webp" alt="contact" class="h-28" />
-					</div>
-				</Card>
+				<Socials />
 			</div>
 			<Stack />
 		</div>

@@ -12,12 +12,12 @@ const { href, text, className } = Astro.props
 
 <button
 	class={twMerge(
-		'flex h-full w-fit px-4 items-center justify-center overflow-hidden rounded-lg bg-slate-50 text-xs font-bold',
+		'shadow-inner-button h-8 text-neutral-500 border-neutral-300 border bg-neutral-200 flex w-fit px-4 items-center justify-center overflow-hidden rounded-lg text-xs font-bold',
 		className
 	)}
 >
-	<a href={href} class="flex w-fit items-center justify-center">
-		{text && <h2 class="">{text}</h2>}
+	<a href={href} class="flex w-full items-center justify-center gap-1">
 		<slot />
+		{text && <h2 class="">{text}</h2>}
 	</a>
 </button>
