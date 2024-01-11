@@ -7,4 +7,5 @@ tools: [react, tailwind, netlify]
 image: ../../assets/projects/memory-card.png
 link: https://memory-card.josephrisk.com
 github: https://github.com/j0srisk/memory-card
+color: '#604BC8'
 ---

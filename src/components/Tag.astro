@@ -1,0 +1,17 @@
+---
+interface Props {
+	text: string
+	textColor?: string
+}
+
+const { text, textColor } = Astro.props
+---
+
+<span
+	class="rounded-sm bg-neutral-100 px-1 py-0.5 text-xs font-semibold text-neutral-600 dark:bg-neutral-900 dark:text-neutral-300"
+	style={{
+		...(textColor && { color: textColor })
+	}}
+>
+	{text}
+</span>

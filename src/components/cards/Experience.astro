@@ -1,27 +1,31 @@
 ---
 import Card from '../Card.astro'
-import Experience from '../Experience.astro'
+import CardInsert from '../CardInsert.astro'
+import Job from '../Job.astro'
+import neutrino from '../../assets/neutrino.png'
+import markel from '../../assets/markel.jpg'
+import frontier from '../../assets/frontier.png'
 ---
 
 <Card className="flex-shrink-0 pb-0" title="Experience">
-    <div class="flex w-full flex-col gap-4 rounded-t-xl bg-slate-50 p-4 pb-4 shadow-inner">
-        <Experience
-            image="/neutrino.png"
-            postion="Freelance Web Developer"
-            company="Neutrino Web Development"
-            duration="2017 - 2023"
-        />
-        <Experience
-            image="/neutrino.png"
-            postion="Underwriting Intern"
-            company="Markel Corporation"
-            duration="Summer 2022"
-        />
-        <Experience
-            image="/neutrino.png"
-            postion="Founding Partner"
-            company="Frontier Extraction"
-            duration="2020 - 2022"
-        />
-    </div>
+	<CardInsert>
+		<Job
+			image={neutrino}
+			postion="Freelance Web Developer"
+			company="Neutrino Web Development"
+			duration="2017 - 2023"
+		/>
+		<Job
+			image={markel}
+			postion="Underwriting Intern"
+			company="Markel Corporation"
+			duration="Summer 2022"
+		/>
+		<Job
+			image={frontier}
+			postion="Founding Partner"
+			company="Frontier Extraction"
+			duration="2020 - 2022"
+		/>
+	</CardInsert>
 </Card>

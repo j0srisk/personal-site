@@ -1,7 +1,9 @@
 ---
+import { Image } from 'astro:assets'
+
 interface Props {
 	postion: string
-	image: string
+	image: ImageMetadata
 	company: string
 	duration: string
 	href?: string
@@ -12,11 +14,11 @@ const { postion, image, company, duration, href } = Astro.props
 
 <div class="flex w-full items-center gap-4">
 	<div class="h-14 w-14 overflow-hidden rounded-lg">
-		<img src={image} alt={company} class="h-full w-full object-cover" />
+		<Image src={image} alt={company} class="h-full w-full object-cover" />
 	</div>
 	<div class="flex flex-col">
 		<p class="text-sm font-semibold">{postion}</p>
-		<div class="flex flex-wrap gap-2 text-xs text-slate-600">
+		<div class="flex flex-wrap gap-2 text-xs text-neutral-600 dark:text-neutral-300">
 			<p class="">{company} • {duration}</p>
 		</div>
 	</div>

@@ -6,4 +6,5 @@ tags: [Static Site, Freelance]
 tools: [webflow, figma, netlify]
 image: ../../assets/projects/westlake-auto-care.png
 link: https://westlakeautocare.com
+color: '#EE1A25'
 ---

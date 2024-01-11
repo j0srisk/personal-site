@@ -1,10 +1,11 @@
 ---
 import Card from '../Card.astro'
+import CardInsert from '../CardInsert.astro'
 import Tool from '../Tool.astro'
 ---
 
 <Card className="flex-1 flex-shrink-0 pb-0" title="Current Stack">
-	<div class="flex h-full w-full flex-col gap-4 rounded-t-xl bg-slate-50 p-4 pb-4 shadow-inner">
+	<CardInsert>
 		<h3 class="-mb-2 text-sm font-bold">Frontend</h3>
 		<Tool tool="nextjs" />
 		<Tool tool="astro" />
@@ -20,5 +21,5 @@ import Tool from '../Tool.astro'
 		<Tool tool="docker" />
 		<h3 class="-mb-2 text-sm font-bold">Database</h3>
 		<Tool tool="postgresql" />
-	</div>
+	</CardInsert>
 </Card>

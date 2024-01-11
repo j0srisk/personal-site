@@ -7,4 +7,5 @@ tools: [javascript, netlify]
 image: ../../assets/projects/etch-a-sketch.png
 link: https://etch-a-sketch.josephrisk.com
 github: https://github.com/j0srisk/etch-a-sketch
+color: '#027F80'
 ---

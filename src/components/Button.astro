@@ -13,11 +13,11 @@ const { href, text, className, backgroundColor } = Astro.props
 
 <button
 	class={twMerge(
-		'shadow-inner-button h-8 text-neutral-500 border-neutral-300 border bg-neutral-200 flex w-fit px-4 items-center justify-center overflow-hidden rounded-lg text-xs font-bold whitespace-nowrap',
+		'shadow-inner-button h-8 text-neutral-500 border-transparent border bg-neutral-200 dark:bg-neutral-900 flex w-fit px-4 items-center justify-center overflow-hidden rounded-lg text-xs font-bold whitespace-nowrap dark:text-white',
 		className
 	)}
 	style={{
-		backgroundColor: backgroundColor || ''
+		...(backgroundColor && { backgroundColor })
 	}}
 >
 	<a href={href} class="flex w-full items-center justify-center gap-1">

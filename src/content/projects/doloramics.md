@@ -6,4 +6,5 @@ tags: [Static Site, Agency]
 tools: [webflow, figma]
 image: ../../assets/projects/doloromics.png
 link: https://doloromics-quick-launch-page.webflow.io
+color: '#653480'
 ---
