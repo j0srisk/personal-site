@@ -8,26 +8,22 @@ import Project from '../components/Project.astro'
 
 import { getCollection } from 'astro:content'
 
-const projects = await getCollection('projects')
+const projects = await getCollection('projects', ({ data }) => {
+	return data.hidden !== true
+})
 ---
 
 <Layout title="Projects">
 	<Nav title="projects" />
-	<div class="flex h-8 w-fit flex-col">
-		<Button href="/" text="← Back Home" />
-	</div>
 
-	<Section title="Some Stuff I've Worked On">
-		<div class="grid grid-cols-3 gap-4">
+	<Button href="/" text="← Back Home" />
+
+	<Section title="Latest Projects">
+		<div class="grid grid-cols-2 gap-4">
 			{
-				projects.map((project) => (
-					<Project
-						href={'/projects/' + project.slug}
-						name={project.data.name}
-						image={project.data.image}
-						tags={project.data.tags}
-					/>
-				))
+				projects
+					.sort((a, b) => new Date(b.data.date).valueOf() - new Date(a.data.date).valueOf())
+					.map((project) => <Project project={project} />)
 			}
 		</div>
 	</Section>

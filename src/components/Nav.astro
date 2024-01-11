@@ -8,10 +8,10 @@ import Button from './Button.astro'
 ---
 
 <nav class="flex w-full justify-between pt-0">
-	<div class="flex gap-0.5 text-2xl font-semibold">
-		<p class="text-slate-600">josephrisk.com</p>
-		<p class="text-slate-600">/</p>
-		<p>{title}.html</p>
+	<div class="flex w-full gap-0.5 truncate text-2xl font-semibold">
+		<p class="text-black">josephrisk.com</p>
+		<p class="text-neutral-300">/</p>
+		<p class="truncate text-neutral-300">{title?.toLowerCase().replace(/\s/g, '-')}.html</p>
 	</div>
 	<div class="flex justify-between gap-2">
 		<Button
@@ -59,10 +59,6 @@ import Button from './Button.astro'
 			</svg>
 		</Button>
 
-		<Button
-			href="/resume"
-			className="h-8 border-0 border-amber-600 bg-amber-500 text-white shadow-none"
-			text="Resume"
-		/>
+		<Button href="/resume" className="h-8 border-0  shadow-none" text="Resume" />
 	</div>
 </nav>

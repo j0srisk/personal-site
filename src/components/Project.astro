@@ -1,29 +1,31 @@
 ---
+import { Image } from 'astro:assets'
+
 import Card from './Card.astro'
 
-interface Props {
-	name: string
-	href: string
-	image: string
-	tags?: string[]
-}
-
-const { href, name, image, tags } = Astro.props
+// somehow import type
+const { project } = Astro.props
 ---
 
-<a href={href} class="group flex flex-col items-center gap-2">
-	<Card className="p-2">
-		<img src={image} alt="random image" class="aspect-[3/2] rounded-2xl" />
+<a href={'/projects/' + project.slug} class="group flex flex-col items-center gap-2">
+	<Card className="h-full p-2">
+		<div class="aspect-video overflow-hidden rounded-2xl">
+			<Image
+				src={project.data.image}
+				alt={project.data.name}
+				class="h-full w-full object-cover object-top"
+			/>
+		</div>
 	</Card>
 
 	<div class="flex w-full flex-col items-start justify-start gap-1">
 		<p class="font-semibold">
-			{name}
+			{project.data.name}
 		</p>
 		{
-			tags && (
+			project.data.tags && (
 				<div class="flex flex-wrap gap-1">
-					{tags.map((tag) => (
+					{project.data.tags.map((tag: any) => (
 						<span class="rounded-sm bg-gray-100 px-1 py-0.5 text-xs font-semibold text-gray-500">
 							{tag}
 						</span>

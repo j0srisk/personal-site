@@ -1,0 +1,31 @@
+---
+import { Image } from 'astro:assets'
+import { getEntry } from 'astro:content'
+
+interface Props {
+	tool: string
+}
+
+const { tool } = Astro.props
+
+const devicon = await getEntry('devicons', tool)
+
+if (!devicon) {
+	throw new Error(`No devicon found for ${tool}`)
+}
+---
+
+<div class="flex w-full items-center gap-4">
+	<div
+		class="flex h-10 w-10 items-center justify-center overflow-hidden rounded-full p-2"
+		style={{ backgroundColor: devicon.data.backgroundColor || '#000' }}
+	>
+		<Image class="object-contain" src={devicon.data.icon} alt={devicon.data.name} />
+	</div>
+	<div class="flex flex-col">
+		<p class="text-sm font-semibold">{devicon.data.name}</p>
+		<div class="flex flex-wrap gap-2 text-xs text-slate-600">
+			<p class="">{devicon.data.usage}</p>
+		</div>
+	</div>
+</div>

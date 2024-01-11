@@ -1,9 +1,10 @@
 ---
 name: Cellularr
-description: Some Stuff
-tags: [Progressive Web App]
-tools: [Next.js, TailwindCSS]
-image: ./nebraska.jpg
-link: https://dossi.ai
+description: This is a template project
+date: 01-01-2024
+tags: [Fullstack, PWA]
+tools: [nextjs]
+image: ../../assets/black.png
+link: https://google.com
 github: https://github.com
 ---

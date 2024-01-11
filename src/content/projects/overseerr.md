@@ -1,9 +1,11 @@
 ---
 name: Overseerr
-description: Some Stuff
+description: This is a template project
+date: 01-01-2024
 tags: [Open Source Contributor]
-tools: [Next.js, TailwindCSS]
-image: ./nebraska.jpg
-link: https://dossi.ai
-github: https://github.com
+tools: [nextjs]
+image: ../../assets/projects/overseerr.webp
+link: https://overseerr.dev/
+github: https://github.com/sct/overseerr
+color: '#AC8BFB'
 ---
