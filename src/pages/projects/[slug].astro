@@ -23,7 +23,7 @@ import Tag from '../../components/Tag.astro'
 <Layout title={project.data.name} navText={'projects/' + project.data.name}>
 	<Button href="/projects" className="border-0 shadow-none" text="← Back" />
 	<section class="flex w-full flex-col gap-4">
-		<div class="flex justify-between gap-4">
+		<div class="flex items-end justify-between gap-4">
 			<h1 class="text-2xl font-bold">{project.data.name}</h1>
 			<div class="flex gap-2">
 				{
@@ -47,7 +47,7 @@ import Tag from '../../components/Tag.astro'
 				}
 			</div>
 		</div>
-		<div class="flex gap-4">
+		<div class="flex flex-col gap-4 md:flex-row">
 			<div class="flex w-full min-w-[66%] flex-col gap-4">
 				<Card className="flex h-full w-full flex-col gap-4 p-2 dark:bg-neutral-900">
 					<div class="aspect-video w-full overflow-hidden rounded-[8px]">
@@ -59,7 +59,7 @@ import Tag from '../../components/Tag.astro'
 					</div>
 				</Card>
 			</div>
-			<Card title="Tools Used" className="">
+			<Card title="Tools Used" className="pb-0">
 				<CardInsert>
 					{project.data.tools.map((tool) => <Tool tool={tool} />)}
 				</CardInsert>

@@ -1,10 +1,18 @@
 ---
+import { Image } from 'astro:assets'
+
 import Layout from '../layouts/Layout.astro'
 import Card from '../components/Card.astro'
 import Hero from '../components/Hero.astro'
 import Section from '../components/Section.astro'
 import Button from '../components/Button.astro'
 import ThemeToggle from '../components/ThemeToggle.tsx'
+import MediaCard from '../components/MediaCard.tsx'
+
+import cellularrMobile from '../assets/cellularrMobile.png'
+import cellularrDesktop from '../assets/cellularrTablet.png'
+import tron from '../assets/tron.png'
+import dossi43 from '../assets/dossi43.png'
 
 // Customized Cards
 import Experience from '../components/cards/Experience.astro'
@@ -19,56 +27,67 @@ import Socials from '../components/cards/Socials.astro'
 <Layout title="Joseph Risk" navText="index">
 	<Hero />
 	<Section title="Latest Projects" href="/projects">
-		<Card className="h-60 border-sky-400 bg-white/80 p-0 dark:border-sky-400">
-			<div class="flex bg-sky-400/25 px-4 pt-4">
-				<div class="flex flex-1 flex-col gap-2 py-8 pl-8 text-sky-900">
+		<Card className="h-60 border-lime-400 bg-white/80 p-0 dark:border-lime-400">
+			<div class="flex flex-col gap-8 bg-lime-400/25 px-8 pt-12 md:flex-row">
+				<div class="flex max-w-[40%] flex-col gap-2 text-lime-900">
 					<h3 class="text-2xl font-bold">Dossi AI</h3>
-					<p class="">Next.js RAG application</p>
+					<p class="">Next.js RAG application Next.js RAG application Next.js RAG application</p>
 					<Button
-						className="border border-sky-600 bg-sky-500 text-base font-semibold text-white dark:bg-sky-500"
+						className="border border-lime-600 bg-lime-500 text-base font-semibold text-white dark:bg-sky-500"
 						href="/projects/dossi-ai"
 					>
 						More Info
 					</Button>
 				</div>
-				<div
-					class="flex h-full flex-1 rotate-3 flex-col items-start justify-start rounded-t-xl pr-8 pt-8"
-				>
-					<img src="/localhost_3000_landing(FHD 4_3).png" alt="Dossi AI" class="rounded-t-lg" />
+				<div class="flex h-full flex-1 items-start justify-start px-8">
+					<Image
+						src={dossi43}
+						alt="Dossi AI"
+						class="rotate-2 rounded-t-lg shadow-xl hover:-translate-y-2"
+					/>
 				</div>
 			</div>
 		</Card>
-		<Card className="h-60 border-amber-400 bg-white/80 p-0 dark:border-amber-400">
-			<div class="flex bg-amber-400/25 px-4 pt-4">
-				<div class="flex flex-1 flex-col gap-2 py-8 pl-8 text-amber-900">
+		<Card className="h-60 border-sky-400 bg-white/80 p-0 dark:border-sky-400">
+			<div class="flex flex-col gap-8 bg-sky-400/25 px-8 pt-12 md:flex-row">
+				<div class="flex max-w-[40%] flex-col gap-2 text-sky-900">
 					<h3 class="text-2xl font-bold">Cellularr</h3>
-					<p class="">Media management PWA for iOS</p>
+					<p class="">Next.js RAG application Next.js RAG application Next.js RAG application</p>
 					<Button
-						className="h-8 border border-amber-600 bg-amber-500 text-base font-semibold text-white dark:bg-amber-500"
+						className="border border-sky-600 bg-sky-500 text-base font-semibold text-white dark:bg-sky-500"
 						href="/projects/cellularr"
 					>
 						More Info
 					</Button>
 				</div>
-				<div class="flex h-full flex-1 flex-col items-start justify-start rounded-t-xl pr-8 pt-8">
-					<img src="/localhost_3000_landing(FHD 4_3).png" alt="Dossi AI" class="rounded-t-lg" />
+				<div class="flex h-full flex-1 items-start justify-start px-8">
+					<Image
+						src={tron}
+						alt="Dossi AI"
+						class="hover:cursor rotate-2 rounded-t-lg bg-black p-2 shadow-xl hover:-translate-y-2"
+					/>
 				</div>
 			</div>
 		</Card>
 	</Section>
 	<Section title="About Me">
-		<div class="grid grid-cols-3 gap-4">
+		<div class="grid grid-cols-2 gap-4 md:grid-cols-3">
 			<TexasEx />
 			<Stats />
 			<Map />
 		</div>
-		<div class="flex gap-4">
-			<div class="flex w-[58%] flex-col gap-4">
+		<div class="flex flex-col gap-4 md:flex-row">
+			<div class="flex flex-col gap-4 md:w-[58%]">
 				<Experience />
 				<Music />
-				<Socials />
+				<div class="hidden md:flex">
+					<Socials />
+				</div>
 			</div>
 			<Stack />
+			<div class="flex md:hidden">
+				<Socials />
+			</div>
 		</div>
 	</Section>
 </Layout>

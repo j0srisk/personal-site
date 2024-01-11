@@ -3,7 +3,7 @@ import Card from '../Card.astro'
 import Mapbox from '../Mapbox.tsx'
 ---
 
-<Card className="aspect-square p-0">
+<Card className="col-span-2 aspect-video p-0 md:col-span-1 md:aspect-square">
 	<div class="relative flex h-full w-full flex-col justify-end">
 		<Mapbox client:only="react" />
 		<div
