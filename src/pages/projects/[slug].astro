@@ -13,7 +13,6 @@ export async function getStaticPaths() {
 const { project } = Astro.props
 
 import Layout from '../../layouts/Layout.astro'
-import Nav from '../../components/Nav.astro'
 import Button from '../../components/Button.astro'
 import Card from '../../components/Card.astro'
 import CardInsert from '../../components/CardInsert.astro'
@@ -21,8 +20,7 @@ import Tool from '../../components/Tool.astro'
 import Tag from '../../components/Tag.astro'
 ---
 
-<Layout title={project.data.name}>
-	<Nav title={'projects/' + project.data.name} />
+<Layout title={project.data.name} navText={'projects/' + project.data.name}>
 	<Button href="/projects" className="border-0 shadow-none" text="← Back" />
 	<section class="flex w-full flex-col gap-4">
 		<div class="flex justify-between gap-4">

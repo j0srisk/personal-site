@@ -7,5 +7,5 @@ tools: [openai, react, tailwind]
 image: ../../assets/projects/resume-gpt.png
 link: https://cv-application.josephrisk.com
 github: https://github.com/j0srisk/cv-application
-color: '#5046E4'
+color: '#11B982'
 ---

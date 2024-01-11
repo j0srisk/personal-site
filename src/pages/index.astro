@@ -4,7 +4,7 @@ import Card from '../components/Card.astro'
 import Hero from '../components/Hero.astro'
 import Section from '../components/Section.astro'
 import Button from '../components/Button.astro'
-import Nav from '../components/Nav.astro'
+import ThemeToggle from '../components/ThemeToggle.tsx'
 
 // Customized Cards
 import Experience from '../components/cards/Experience.astro'
@@ -16,8 +16,7 @@ import Stack from '../components/cards/Stack.astro'
 import Socials from '../components/cards/Socials.astro'
 ---
 
-<Layout title="Joseph Risk">
-	<Nav title=`index` />
+<Layout title="Joseph Risk" navText="index">
 	<Hero />
 	<Section title="Latest Projects" href="/projects">
 		<Card className="h-60 border-sky-400 bg-white/80 p-0 dark:border-sky-400">

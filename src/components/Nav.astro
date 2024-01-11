@@ -10,10 +10,16 @@ import Button from './Button.astro'
 <nav class="flex w-full justify-between pt-0">
 	<div class="flex w-full gap-0.5 truncate text-2xl font-semibold">
 		<p class="">josephrisk.com</p>
-		<p class="text-neutral-300 dark:text-neutral-700">/</p>
-		<p class="truncate text-neutral-300 dark:text-neutral-700">
-			{title?.toLowerCase().replace(/\s/g, '-')}.html
-		</p>
+		{
+			title && (
+				<>
+					<p class="text-neutral-300 dark:text-neutral-700">/</p>
+					<p class="truncate text-neutral-300 dark:text-neutral-700">
+						{title?.toLowerCase().replace(/\s/g, '-')}.html
+					</p>
+				</>
+			)
+		}
 	</div>
 	<div class="flex justify-between gap-2">
 		<Button
@@ -61,6 +67,6 @@ import Button from './Button.astro'
 			</svg>
 		</Button>
 
-		<Button href="/resume" className="h-8 border-0 shadow-none" text="Resume" />
+		<Button href="JosephRiskResumeSU23.pdf" className="h-8 border-0 shadow-none" text="Resume" />
 	</div>
 </nav>
