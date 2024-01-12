@@ -1,9 +1,15 @@
 ---
 import Card from '../Card.astro'
+import FadeText from '../FadeText.tsx'
 ---
 
 <Card className="w-full border-amber-600 bg-amber-300 p-0 text-white dark:border-amber-600">
 	<div class="flex h-full w-full flex-col items-center justify-center p-2">
-		<h2 class="text-center text-4xl font-bold">Lorem ipsum</h2>
+		<FadeText
+			sentences={['7 + years Freelancing', '4 + years Undergrad', '∞ + hours Leetcode']}
+			className="text-center text-4xl font-bold"
+			duration={5000}
+			client:only="react"
+		/>
 	</div>
 </Card>
