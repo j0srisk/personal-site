@@ -49,14 +49,16 @@ import Tag from '../../components/Tag.astro'
 		</div>
 		<div class="flex flex-col gap-4 md:flex-row">
 			<div class="flex w-full min-w-[66%] flex-col gap-4">
-				<Card className="flex h-full w-full flex-col gap-4 p-2 dark:bg-neutral-900">
-					<div class="aspect-video w-full overflow-hidden rounded-[8px]">
-						<Image
-							src={project.data.image}
-							alt={project.data.name}
-							class="object-cover object-top"
-						/>
-					</div>
+				<Card className="p-0">
+					<CardInsert>
+						<div class="aspect-video w-full overflow-hidden rounded-[8px]">
+							<Image
+								src={project.data.image}
+								alt={project.data.name}
+								class="object-cover object-top"
+							/>
+						</div>
+					</CardInsert>
 				</Card>
 			</div>
 			<Card title="Tools Used" className="pb-0">

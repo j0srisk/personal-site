@@ -2,6 +2,7 @@
 import { Image } from 'astro:assets'
 
 import Card from './Card.astro'
+import CardInsert from './CardInsert.astro'
 import Tag from './Tag.astro'
 
 // somehow import type
@@ -9,14 +10,16 @@ const { project } = Astro.props
 ---
 
 <a href={'/projects/' + project.slug} class="group flex flex-col items-center gap-2">
-	<Card className="h-full p-2 dark:bg-neutral-900">
-		<div class="aspect-video overflow-hidden">
-			<Image
-				src={project.data.image}
-				alt={project.data.name}
-				class="h-full w-full rounded-[8px] object-cover object-top"
-			/>
-		</div>
+	<Card className="h-full bg-neutral-100 p-0 dark:bg-neutral-900">
+		<CardInsert>
+			<div class="aspect-video overflow-hidden">
+				<Image
+					src={project.data.image}
+					alt={project.data.name}
+					class="h-full w-full rounded-[8px] object-cover object-top transition-all duration-300 ease-in-out group-hover:scale-95 group-hover:rounded-[6px]"
+				/>
+			</div>
+		</CardInsert>
 	</Card>
 
 	<div class="flex w-full flex-col items-start justify-start gap-1">
