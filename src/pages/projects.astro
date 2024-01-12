@@ -16,8 +16,8 @@ const projects = await getCollection('projects', ({ data }) => {
 <Layout title="Projects" navText="Projects">
 	<Button href="/" className="border-0 shadow-none" text="← Back" />
 
-	<Section title="Latest Projects">
-		<div class="grid grid-cols-1 gap-4 md:grid-cols-2">
+	<Section title="Latest Work">
+		<div class="grid w-full grid-cols-1 gap-4 md:grid-cols-2">
 			{
 				projects
 					.sort((a, b) => new Date(b.data.date).valueOf() - new Date(a.data.date).valueOf())

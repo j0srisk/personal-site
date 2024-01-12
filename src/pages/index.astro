@@ -24,16 +24,14 @@ import CardInsert from '../components/CardInsert.astro'
 
 <Layout title="Joseph Risk" navText="index">
 	<Hero />
-	<Section title="Latest Projects" href="/projects">
+	<Section title="Latest Work" href="/projects">
 		<div class="relative flex h-96 w-full flex-col justify-end md:h-60 md:flex-row">
 			<Card
 				className="flex h-1/2 flex-row items-end justify-end border-lime-500 bg-lime-300 p-0 md:h-full md:w-3/4 dark:border-lime-500"
 			>
 				<div class="flex h-4/5 w-full flex-col justify-center gap-2 px-8 md:h-full md:w-2/3">
 					<h3 class="text-xl font-bold text-black">Dossi AI</h3>
-					<p class="text-lime-900">
-						Next.js RAG application Next.js RAG application Next.js RAG application
-					</p>
+					<p class="text-lime-900">Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
 					<Button
 						className="border border-lime-600 bg-lime-500 text-base font-semibold text-white dark:bg-lime-500"
 						href="/projects/dossi-ai"
@@ -52,7 +50,7 @@ import CardInsert from '../components/CardInsert.astro'
 						<Image
 							src={ipad}
 							alt="Cellularr"
-							class="h-full w-full object-cover object-top transition-all duration-300 ease-in-out hover:-translate-y-4 hover:cursor-pointer"
+							class="h-fit w-full object-cover object-top transition-all duration-300 ease-in-out hover:-translate-y-4 hover:cursor-pointer"
 						/>
 					</div>
 				</CardInsert>
@@ -66,9 +64,7 @@ import CardInsert from '../components/CardInsert.astro'
 			>
 				<div class="flex h-4/5 w-full flex-col justify-center gap-2 px-8 md:h-full md:w-[60%]">
 					<h3 class="text-xl font-bold text-black">Cellularr</h3>
-					<p class="text-sky-900">
-						Next.js RAG application Next.js RAG application Next.js RAG application
-					</p>
+					<p class="text-sky-900">Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
 					<Button
 						className="border border-sky-600 bg-sky-500 text-base font-semibold text-white dark:bg-sky-500"
 						href="/projects/cellularr"
