@@ -1,7 +1,7 @@
 import { z, defineCollection } from 'astro:content'
 
 const projects = defineCollection({
-	type: 'content', // v2.5.0 and later
+	type: 'content',
 	schema: ({ image }) =>
 		z.object({
 			name: z.string(),
@@ -18,7 +18,7 @@ const projects = defineCollection({
 })
 
 const devicons = defineCollection({
-	type: 'content',
+	type: 'data',
 	schema: ({ image }) =>
 		z.object({
 			name: z.string(),
