@@ -1,6 +1,7 @@
 ---
 import Card from '../Card.astro'
 import CD from '../CD.astro'
+import Stack from '../Stack.jsx'
 ---
 
 <Card className="border-rose-600 bg-rose-300 p-0 text-white  dark:border-rose-600">
@@ -57,10 +58,6 @@ import CD from '../CD.astro'
 				</svg>
 			</div>
 		</div>
-		<a href="https://toroymoi.bandcamp.com/album/outer-peace">
-			<div class="rotate-2 shadow">
-				<CD />
-			</div>
-		</a>
+		<Stack client:only="react" />
 	</div>
 </Card>
