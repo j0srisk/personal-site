@@ -11,7 +11,8 @@ export default function Record(props) {
 	})
 
 	const variantsFrontCard = {
-		animate: { scale: 1, y: 0, opacity: 1, rotate: 6 },
+		//random rotation between -6 and 6
+		animate: { scale: 1, y: 0, opacity: 1, rotate: Math.floor(Math.random() * 13) - 6 },
 		exit: (custom) => ({
 			x: custom,
 			opacity: 0,
@@ -19,9 +20,14 @@ export default function Record(props) {
 			transition: { duration: 0.2 }
 		})
 	}
+
+	const variantsMiddleCard = {
+		animate: { scale: 1, y: 0, opacity: 1, rotate: 0 }
+	}
+
 	const variantsBackCard = {
 		initial: { scale: 0, y: 105, opacity: 0 },
-		animate: { scale: 1, y: 0, opacity: 0.5, rotate: 0 }
+		animate: { scale: 1, y: 0, opacity: 0.5, rotate: Math.floor(Math.random() * 13) - 6 }
 	}
 
 	function handleDragEnd(_, info) {
@@ -48,13 +54,19 @@ export default function Record(props) {
 			dragConstraints={{ top: 0, right: 0, bottom: 0, left: 0 }}
 			onDragEnd={handleDragEnd}
 			// Animation
-			variants={props.frontCard ? variantsFrontCard : variantsBackCard}
+			variants={
+				props.order == 1
+					? variantsFrontCard
+					: props.order == 2
+						? variantsMiddleCard
+						: variantsBackCard
+			}
 			initial="initial"
 			animate="animate"
 			exit="exit"
 			custom={exitX}
 			transition={
-				props.frontCard
+				props.order == 1
 					? { type: 'spring', stiffness: 300, damping: 20 }
 					: { scale: { duration: 0.2 }, opacity: { duration: 0.4 } }
 			}

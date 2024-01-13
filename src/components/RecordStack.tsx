@@ -14,14 +14,19 @@ export default function RecordStack({ index, setIndex, albums }: Props) {
 		<motion.div className="relative h-36 w-36 flex-shrink-0">
 			<AnimatePresence initial={false}>
 				<Record
+					key={index + 2}
+					order={3}
+					backgroundImage={`url(${albums[(index + 2) % albums.length].coverURL})`}
+				/>
+				<Record
 					key={index + 1}
-					frontCard={false}
+					order={2}
 					backgroundImage={`url(${albums[(index + 1) % albums.length].coverURL})`}
 				/>
 				<Record
 					key={index}
-					frontCard={true}
 					index={index}
+					order={1}
 					setIndex={setIndex}
 					drag="x"
 					albums={albums}
