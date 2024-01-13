@@ -1,9 +1,10 @@
 ---
 import Card from '../Card.astro'
+import CD from '../CD.astro'
 ---
 
-<Card className="border-rose-600 bg-rose-300 p-0 text-white dark:border-rose-600">
-	<div class="flex items-center justify-center gap-8 p-4 px-4">
+<Card className="border-rose-600 bg-rose-300 p-0 text-white  dark:border-rose-600">
+	<div class="group flex items-center justify-center gap-8 p-4 px-8">
 		<div class="flex w-full flex-grow-0 flex-col truncate">
 			<div class="flex items-center gap-1">
 				<svg
@@ -57,22 +58,8 @@ import Card from '../Card.astro'
 			</div>
 		</div>
 		<a href="https://toroymoi.bandcamp.com/album/outer-peace">
-			<div
-				class="group relative aspect-square h-36 flex-shrink-0 flex-grow-0 overflow-hidden rounded-lg bg-white p-1 shadow"
-			>
-				<div
-					class="absolute left-0 top-0 h-full w-full rounded-lg border border-black bg-neutral-900 shadow-inner-button"
-				>
-				</div>
-				<img
-					src="https://f4.bcbits.com/img/a3806639204_65"
-					alt="cover"
-					class="rounded-spin absolute left-0 top-0 z-10 rounded-lg p-1"
-				/>
-				<div
-					class="absolute bottom-0 left-0 right-0 top-0 z-20 m-auto h-1/5 w-1/5 scale-0 rounded-full border border-neutral-900 bg-rose-300 ring-[6px] ring-inset ring-white transition-all duration-500 group-hover:scale-100"
-				>
-				</div>
+			<div class="rotate-2 shadow">
+				<CD />
 			</div>
 		</a>
 	</div>
