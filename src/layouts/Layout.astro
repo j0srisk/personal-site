@@ -1,5 +1,6 @@
 ---
 import '@fontsource-variable/inter'
+import { ViewTransitions } from 'astro:transitions'
 import Nav from '../components/Nav.astro'
 import Footer from '../components/Footer.astro'
 
@@ -21,6 +22,7 @@ const { title, navText } = Astro.props
 		<link href="https://unpkg.com/maplibre-gl@3.6.2/dist/maplibre-gl.css" rel="stylesheet" />
 		<meta name="generator" content={Astro.generator} />
 		<title>{title}</title>
+		<ViewTransitions />
 		<style is:global>
 			@keyframes spin {
 				from {
@@ -48,16 +50,15 @@ const { title, navText } = Astro.props
 		<main class="flex w-full flex-1 flex-col justify-start gap-8"><slot /></main>
 
 		<Footer />
+		<script>
+			if (
+				sessionStorage.theme === 'dark' ||
+				(!('theme' in sessionStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)
+			) {
+				document.documentElement.classList.add('dark')
+			} else {
+				document.documentElement.classList.remove('dark')
+			}
+		</script>
 	</body>
-
-	<script>
-		if (
-			sessionStorage.theme === 'dark' ||
-			(!('theme' in sessionStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)
-		) {
-			document.documentElement.classList.add('dark')
-		} else {
-			document.documentElement.classList.remove('dark')
-		}
-	</script>
 </html>
