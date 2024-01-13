@@ -50,15 +50,5 @@ const { title, navText } = Astro.props
 		<main class="flex w-full flex-1 flex-col justify-start gap-8"><slot /></main>
 
 		<Footer />
-		<script>
-			if (
-				sessionStorage.theme === 'dark' ||
-				(!('theme' in sessionStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)
-			) {
-				document.documentElement.classList.add('dark')
-			} else {
-				document.documentElement.classList.remove('dark')
-			}
-		</script>
 	</body>
 </html>

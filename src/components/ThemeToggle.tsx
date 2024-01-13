@@ -3,6 +3,14 @@ import { useState, useEffect } from 'react'
 export default function ThemeToggle() {
 	const [isDarkMode, setIsDarkMode] = useState(false)
 
+	// checks if user has set a preference for dark mode, disabled for now
+	//|| (!('theme' in sessionStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)
+	if (sessionStorage.theme === 'dark') {
+		document.documentElement.classList.add('dark')
+	} else {
+		document.documentElement.classList.remove('dark')
+	}
+
 	useEffect(() => {
 		setIsDarkMode(document.documentElement.classList.contains('dark'))
 	}, [])
