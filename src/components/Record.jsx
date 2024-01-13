@@ -1,7 +1,7 @@
 import { useState } from 'react'
 import { motion, useMotionValue, useTransform, AnimatePresence } from 'framer-motion'
 
-export default function Card(props) {
+export default function Record(props) {
 	const [exitX, setExitX] = useState(0)
 
 	const x = useMotionValue(0)
@@ -27,11 +27,11 @@ export default function Card(props) {
 	function handleDragEnd(_, info) {
 		if (info.offset.x < -100) {
 			setExitX(-250)
-			props.setIndex(props.index + 1)
+			props.setIndex((props.index + 1) % props.albums.length)
 		}
 		if (info.offset.x > 100) {
 			setExitX(250)
-			props.setIndex(props.index + 1)
+			props.setIndex((props.index + 1) % props.albums.length)
 		}
 	}
 
@@ -66,7 +66,7 @@ export default function Card(props) {
 
 					scale
 				}}
-				className="h-full w-full rounded shadow-lg"
+				className="h-32 w-32 rounded shadow-lg"
 			/>
 		</motion.div>
 	)

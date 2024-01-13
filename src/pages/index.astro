@@ -13,7 +13,8 @@ import ipad from '../assets/ipad.png'
 
 // Customized Cards
 import Experience from '../components/cards/Experience.astro'
-import Music from '../components/cards/Music.astro'
+
+import Music from '../components/cards/Music.tsx'
 import TexasEx from '../components/cards/TexasEx.astro'
 import Stats from '../components/cards/Stats.astro'
 import Map from '../components/cards/Map.astro'
@@ -109,12 +110,14 @@ import CardInsert from '../components/CardInsert.astro'
 		<div class="flex flex-col gap-4 md:flex-row">
 			<div class="flex flex-col gap-4 md:w-[58%]">
 				<Experience />
-				<Music />
+				<Music client:only="react" />
 				<div class="hidden md:flex">
 					<Socials />
 				</div>
 			</div>
-			<Stack />
+			<div class="flex-1 items-stretch">
+				<Stack />
+			</div>
 			<div class="flex md:hidden">
 				<Socials />
 			</div>
