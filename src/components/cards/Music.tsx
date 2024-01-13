@@ -41,7 +41,7 @@ export default function Music() {
 			)}
 		>
 			<div className="group flex h-full items-center gap-8">
-				<div className="relative flex h-full w-full flex-grow-0 flex-col items-start justify-center truncate">
+				<div className="relative flex h-full w-full flex-grow-0 flex-col items-start justify-center truncate truncate">
 					<div className="flex items-center gap-1">
 						<svg
 							xmlns="http://www.w3.org/2000/svg"
@@ -53,7 +53,7 @@ export default function Music() {
 						</svg>
 						<p className="z-10 text-xs">Current Coding Jams</p>
 					</div>
-					<h3 className="z-10 w-full truncate text-wrap text-2xl font-bold">
+					<h3 className="z-10 w-full truncate text-xl font-bold md:text-2xl">
 						{Albums[index].name}
 					</h3>
 					<p className="z-10 text-sm">{Albums[index].artist}</p>
