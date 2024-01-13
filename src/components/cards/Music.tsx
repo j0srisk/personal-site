@@ -16,13 +16,13 @@ export default function Music() {
 			name: 'The Slow Rush',
 			artist: 'Tame Impala',
 			coverURL: 'https://upload.wikimedia.org/wikipedia/en/5/54/Tame_Impala_-_The_Slow_Rush.png',
-			className: 'bg-red-200 border-red-500'
+			className: 'bg-red-200 border-red-500 dark:border-red-500'
 		},
 		{
 			name: 'Outer Peace',
 			artist: 'Toro y Moi',
 			coverURL: 'https://upload.wikimedia.org/wikipedia/en/7/75/Toro_y_Moi_-_Outer_Peace.png',
-			className: 'bg-yellow-200 border-yellow-500 text-black'
+			className: 'bg-yellow-200 border-yellow-500 text-black dark:border-yellow-500 dark:text-black'
 		},
 		{
 			name: 'A Moon Shaped Pool',
@@ -36,7 +36,7 @@ export default function Music() {
 	return (
 		<div
 			className={twMerge(
-				`border-1 relative w-full flex-shrink-0 overflow-hidden rounded-2xl border border-neutral-300 p-4 text-black shadow transition-all duration-1000 ease-in-out dark:border-zinc-800`,
+				`border-1 relative w-full flex-shrink-0 overflow-hidden rounded-2xl border border-neutral-300 p-4 text-black shadow transition-all duration-1000 ease-in-out dark:border-zinc-800 dark:text-white`,
 				Albums[index].className
 			)}
 		>

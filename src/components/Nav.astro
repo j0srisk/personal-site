@@ -7,14 +7,14 @@ const { title } = Astro.props
 import Button from './Button.astro'
 ---
 
-<nav class="flex w-full justify-between pt-0">
-	<div class="flex w-full gap-0.5 truncate text-2xl font-semibold">
+<nav class="flex w-full justify-between gap-4 pt-0">
+	<div class="flex w-[full] gap-0.5 truncate text-nowrap text-2xl font-semibold">
 		<p class="">josephrisk.com</p>
 		{
 			title && (
 				<>
 					<p class="hidden text-neutral-300 md:flex dark:text-neutral-700">/</p>
-					<p class="hidden truncate text-neutral-300 md:flex dark:text-neutral-700">
+					<p class="hidden  truncate text-neutral-300 md:flex dark:text-neutral-700">
 						{title?.toLowerCase().replace(/\s/g, '-')}.html
 					</p>
 				</>

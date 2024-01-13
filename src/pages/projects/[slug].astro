@@ -30,8 +30,8 @@ import Tag from '../../components/Tag.astro'
 					project.data.link && (
 						<Button
 							href={project.data.link}
-							backgroundColor={project.data.color}
-							className={`border-0 text-white shadow-none`}
+							backgroundColor={project.data.color || '#171717'}
+							className={`border-0 shadow-none`}
 							text="Live Link"
 						/>
 					)
@@ -61,11 +61,13 @@ import Tag from '../../components/Tag.astro'
 					</CardInsert>
 				</Card>
 			</div>
-			<Card title="Tools Used" className="pb-0">
-				<CardInsert>
-					{project.data.tools.map((tool) => <Tool tool={tool} />)}
-				</CardInsert>
-			</Card>
+			<div class="w-full">
+				<Card title="Tools Used" className="pb-0">
+					<CardInsert className="pb-4">
+						{project.data.tools.map((tool) => <Tool tool={tool} />)}
+					</CardInsert>
+				</Card>
+			</div>
 		</div>
 		<div class="flex gap-4">
 			<Card title="About">
