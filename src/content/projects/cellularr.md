@@ -5,7 +5,7 @@ date: 01-01-2024
 tags: [Fullstack, PWA]
 tools: [nextjs]
 image: ../../assets/projects/cellularr.png
-link: https://google.com
-github: https://github.com
+link: https://cellularr.josephrisk.com/
+github: https://github.com/j0srisk/cellularr
 color: '#E0870A'
 ---
