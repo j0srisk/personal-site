@@ -28,10 +28,26 @@ import CardInsert from '../components/CardInsert.astro'
 	<Section title="Latest Work" href="/projects">
 		<div class="relative flex h-96 w-full flex-col justify-end md:h-60 md:flex-row">
 			<Card
-				className="flex h-1/2 flex-row items-end justify-end border-lime-500 bg-lime-200 p-0 md:h-full md:w-3/4 dark:border-lime-500"
+				className="flex h-1/2 flex-row items-end justify-end border-lime-500 bg-lime-200 p-0 dark:border-lime-500 md:h-full md:w-3/4"
 			>
 				<div class="flex h-4/5 w-full flex-col justify-center gap-2 px-8 md:h-full md:w-2/3">
-					<h3 class="text-xl font-bold text-black">Dossi AI</h3>
+					<div class="relative flex w-fit items-start justify-center gap-1.5">
+						<h1 class="text-xl font-bold md:text-2xl">Dossi</h1>
+
+						<div class="relative mt-1">
+							<div class="flex h-4 rounded bg-black p-[2px]">
+								<div
+									class="z-20 flex h-full w-full items-center justify-center rounded-[1.5px] bg-lime-200 px-1.5 text-[10px] font-extrabold transition-all duration-1000 ease-in-out"
+								>
+									AI
+								</div>
+							</div>
+							<div
+								class="group absolute right-0 top-0 flex h-full w-full rounded-md bg-gradient-to-br from-[#49CC5F] from-10% to-[#a3e635] opacity-0 transition-all duration-1000 ease-in-out group-hover:opacity-100"
+							>
+							</div>
+						</div>
+					</div>
 					<p class="text-lime-900">Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
 					<Button
 						className="border border-lime-600 bg-lime-500 text-base font-semibold text-white hover:bg-lime-400 dark:bg-lime-500 dark:hover:bg-lime-400"
@@ -42,7 +58,7 @@ import CardInsert from '../components/CardInsert.astro'
 				</div>
 			</Card>
 			<Card
-				className="absolute left-0 top-0 h-3/5 bg-white p-4 pb-0 md:h-full md:w-1/2 dark:bg-black"
+				className="absolute left-0 top-0 h-3/5 bg-white p-4 pb-0 dark:bg-black md:h-full md:w-1/2"
 			>
 				<CardInsert>
 					<div
@@ -61,10 +77,10 @@ import CardInsert from '../components/CardInsert.astro'
 			class="relative flex h-96 w-full flex-col justify-end md:h-80 md:flex-row md:justify-start"
 		>
 			<Card
-				className="flex h-1/2 items-end border-sky-500 bg-sky-200 p-0 md:h-full md:w-1/2 dark:border-sky-500"
+				className="flex h-1/2 items-end border-sky-500 bg-sky-200 p-0 dark:border-sky-500 md:h-full md:w-1/2"
 			>
 				<div class="flex h-4/5 w-full flex-col justify-center gap-2 px-8 md:h-full md:w-[60%]">
-					<h3 class="text-xl font-bold text-black">Cellularr</h3>
+					<h3 class="text-xl font-bold text-black md:text-2xl">Cellularr</h3>
 					<p class="text-sky-900">Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
 					<Button
 						className="border border-sky-600 bg-sky-500 text-base font-semibold text-white hover:bg-sky-400 dark:bg-sky-500 dark:hover:bg-sky-400"
@@ -75,7 +91,7 @@ import CardInsert from '../components/CardInsert.astro'
 				</div>
 			</Card>
 			<Card
-				className="absolute right-0 top-0 h-3/5 bg-white p-4 pb-0 md:h-full md:w-[70%] dark:bg-black"
+				className="absolute right-0 top-0 h-3/5 bg-white p-4 pb-0 dark:bg-black md:h-full md:w-[70%]"
 			>
 				<CardInsert>
 					<div
