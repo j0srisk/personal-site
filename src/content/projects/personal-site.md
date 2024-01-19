@@ -6,4 +6,5 @@ tags: [Static Site]
 tools: [astro, figma, netlify]
 image: ../../assets/projects/personal-site.png
 link: https://josephrisk.com
+github: https://github.com/j0srisk/personal-site
 ---
