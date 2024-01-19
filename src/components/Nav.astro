@@ -13,8 +13,8 @@ import Button from './Button.astro'
 		{
 			title && (
 				<>
-					<p class="hidden text-neutral-300 md:flex dark:text-neutral-700">/</p>
-					<p class="hidden  truncate text-neutral-300 md:flex dark:text-neutral-700">
+					<p class="hidden text-neutral-300 dark:text-neutral-700 md:flex">/</p>
+					<p class="hidden  truncate text-neutral-300 dark:text-neutral-700 md:flex">
 						{title?.toLowerCase().replace(/\s/g, '-')}.html
 					</p>
 				</>
@@ -67,6 +67,6 @@ import Button from './Button.astro'
 			</svg>
 		</Button>
 
-		<Button href="JosephRiskResumeSU23.pdf" className="h-8 border-0 shadow-none" text="Resume" />
+		<Button href="JosephRiskResumeDev.pdf" className="h-8 border-0 shadow-none" text="Resume" />
 	</div>
 </nav>
