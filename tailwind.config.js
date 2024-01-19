@@ -6,7 +6,8 @@ export default {
 	theme: {
 		extend: {
 			fontFamily: {
-				sans: ['Inter Variable', 'Inter', ...defaultTheme.fontFamily.sans]
+				sans: ['Inter Variable', 'Inter', ...defaultTheme.fontFamily.sans],
+				marker: ['Permanent Marker', 'cursive']
 			},
 			boxShadow: {
 				'inner-button': 'inset 0 1px 1px 0 hsla(0, 0%, 100%, 0.5)'
