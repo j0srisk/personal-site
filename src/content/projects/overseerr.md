@@ -1,6 +1,6 @@
 ---
 name: Overseerr
-description: Opensource contributor to Overseerr, a request management and media discovery tool for the Plex ecosystem with over 40 million downloads.
+description: Open source contributor to Overseerr, a request management and media discovery tool for the Plex ecosystem with over 40 million downloads.
 date: 01-01-2024
 tags: [Open Source Contributor]
 tools: [nextjs]
